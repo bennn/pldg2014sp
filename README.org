@@ -1,0 +1,11 @@
+* Presenting
+
+Our very first racket slideshow.
+
+** Notes
+
+Ross and Nate say "focus on intution", so that's what we'll try.
+
+** End
+
+Ben C + Ben G
