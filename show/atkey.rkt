@@ -9,6 +9,9 @@
    'next
    (para "Idea: use a type system to ensure invariance properties."))
 
+(slide #:title "Atkey (2014)"
+   (para "The conserved physical quantities will correspond exactly with the free theorems obtained via parametricity."))
+
 ;; Give a physical system, it's equation, and the equation of its type.
 ;; Build intuition about the type.
 ;; Can use example of mass-on-a-spring spelled out in section 1 or any of the section 5 examples
