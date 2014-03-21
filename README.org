@@ -2,6 +2,11 @@
 
 Our very first racket slideshow.
 
+** Install and Run
+- install racket, make certain the `slideshow` command is on your path
+- `cd show; slideshow main.rkt`
+- `f = forward` `b=back`. Or use arrow keys. `esc` or `cmd-q` to quit
+
 ** Notes
 
 Ross and Nate say "focus on intution", so that's what we'll try.
