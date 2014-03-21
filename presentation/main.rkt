@@ -1,9 +1,14 @@
 #lang slideshow
 
-(require introduction)
-(require parametricity)
-(require atkey-intro)
-(require atkey-intuition)
-(require atkey-examples)
-(require atkey-formalisms)
-(require conclusion)
+(require slideshow/code)
+(require slideshow/latex)
+(require plot)
+
+(define (todo s) (string-append "TODO: " s))
+
+(include "introduction.rkt")
+(include "parametricity.rkt")
+(include "physics.rkt")
+(include "atkey.rkt")
+(include "lessons.rkt")
+(include "future-work.rkt")
