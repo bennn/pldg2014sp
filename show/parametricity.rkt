@@ -79,6 +79,7 @@
    (tt "evens (succ* [1,2,3]) =") 'next (tt "[2,4]")
    'next
    (para "These functions are" (it "too specific")"."
-         "The signature" (code "int list → int list") "is not general enough for parametricity to apply.")
-   'next
+         "The signature" (code "int list → int list") "is not general enough for parametricity to apply."))
+
+(slide #:title "Application: Theorems for Free"
    (para (bt "Bottom line: ") "functions with related types have related values."))
