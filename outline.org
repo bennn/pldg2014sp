@@ -1,0 +1,160 @@
+* TODO 2014-03-24 post-Mark
+  - Mark talked about types as relations
+    - Relations from ___ -> ___
+  - he spent the entire time on the board drawing the 
+    formalization. Drawing Reynold's formalization. 
+    The core of the paper, supposedly.
+* TODO 2014-03-26 post-Ben
+  - make it fun!
+  - first, we gonna talk  about physics
+    (painful world, hard derivations)
+  - mass on a string has simple energy equation, can quickly show energy is 
+    conserved
+  - things get very complicated very quickly
+  - BUT WAIT! We have types. Hhahahhaah things are swagger
+* TODO 2014-03-26 meeting
+** outline'
+*** 1. today we'll talk about physics
+  - change things up a little
+  - planets, cars, atoms, real science
+  - phenomena of conserved quantities
+  - demos, death star explosions. Present with equations
+*** noethers theorem
+  - noether (1918) observed that
+    "any differentiable symmetry of the action of a physical system
+    has a corresponding conservation law"
+  - the action is a lagrangian
+  - there's a mechanical way of computing invariances from lagrangians
+  - smile for a minute, moment of silence
+*** to types
+  - what could be better than that (put a halo over the equation)? TYPES
+  - flash example: we can type the equation 
+  - we've seen invariance properties before. 
+  - Wadler's map function is using invariance properties
+  - Atkey: we can describe this equation with a type system to
+    gain some insight and save some work
+*** examples! understanding atkey
+  - energy equation for two points
+  - give their type
+  - explain type of MINUS
+*** wat do from here
+  - rest of paper really details this type system. You should read it.
+  - Atkey (according to POPL talk) thinks we can do more here with physics
+  - we disagree
+*** 4. What does this mean?
+  - what has Atkey contributed?
+  - well, where have we come?
+  - Reynolds: types are relations
+  - Wadler: relations give free theorems
+  - Atkey: free theorems are symmetries
+*** Reynolds types are sets ran into problems
+  - there were some pretty heavy restrictions
+  - not too usable
+*** Wadlers free theorems got stuck too
+  - couldn't handle higher-kinded types, things weren't as powerful as you'd expect
+*** Atkey subsumes both
+  - lagragian comes from infinetesimal symmetries in somee s[aec
+  - atkey focused on one space, we can generalize
+*** Applications
+  - types on system F, get progress/preservation rules
+  - simple 3-node graph, unit -> int -> bool.
+    - graph transformations turn to free theorems
+*** help
+  - there's an equational theory here, we can getneralize. Dexter?
+** deeper insight notes
+Atkey has brought a geometric intuition to type theory.
+That's important because when you have a geometry in math that gives a visual model to work with
+Easier to develop intuition, nice new perspective on the world.
+We can talk about shapes, rotations, flipping, stretching.
+Connections to HOTT are particularly interesting, that's a new type of invariance we'd like to respect
+respect = instead of considering automorphism, consider the fundamental group in the world of HOTT (π_1 types)
+  square and circle have same path=induction principle, they're the same. 
+
+Atkey is rigid symmetries in the sense of classical group theory
+HOTT is continuous symmetries in the sense of topological spaces
+  Would need to use Atkeys C∞ types
+
+* intro
+  - keep it short
+** title
+* parametricity
+** what is a type?
+  - set
+  - ?
+  - relation
+** powerful idea
+  - reynolds paper
+  - wadler, summary
+** deeper dive
+  - more reynolds, heavier text?
+  - this is for Dexter, who wanted to see
+    Reynolds
+** examples, review of Basu
+  - map, fold, reverse
+** counterexamples
+* physics
+** not isolated!
+  - relations appear all over
+** points on a plane
+  - take 2 points, have locations
+  - subtract, get distance
+  - positions no longer matter TODO
+    - any coordinate system, this distance
+      is a conserved quantity
+  - atkey has hints here
+** many other conserved quantities
+  - energy (particle in potential field)
+  - momentum (single particle flying around)
+  - energy + angular momentum (n-body problem)
+  - energy (pendulum)
+  - damped oscillator
+    - energy & linear momentum are function
+      of time
+** in fact we can generalize
+  - lagrangian, general way to find these
+* correlation
+** conserved properties
+  - types, physical properties
+  - idea: encode 
+  - Reynolds: invariant under change of data representation
+  - Noether: invariant under change of coordinates
+** TODO example: 
+  - [X] points (diagram)
+  - [ ] points between spring
+  - [X] pendulum (diagram)
+** how does it work
+  - at a high level
+* summarize paper
+** abstract
+  - Atkey's observation: can we generalize 
+    this notion of invariance in physics?
+  - create a type system encoding these
+    observed invariance properties
+  - by parametricity, polymorphism
+** TODO details
+  - give equation and its type
+** rest of shit
+  - the rest of this shit is all formalism
+  - cool ideas, for example TODO
+* deeper meaning
+  - what does this mean
+* future work
+  - where can we go
+** steal atkey's slides
+** add bkc slides
+* bib
+  - Reynolds 1983
+  - Wadler 1989
+  - Atkey 2014
+  - Atkey et. al 2013
+* other
+  - Polymorphic functions are related if they
+    take related types into related results
+  - Prop: If t is a closed term of type T
+    then (t,t)\in T', where T' is the 
+    relation corresponding to the type T
+  - More Formal, with freevars:
+    \forall X, x, t, T, if 
+    X; x |- t : T then X;x |= t : T
+    - dude, whatever ^^^ 
+
