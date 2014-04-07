@@ -12,7 +12,7 @@
     conserved
   - things get very complicated very quickly
   - BUT WAIT! We have types. Hhahahhaah things are swagger
-* TODO 2014-03-26 meeting
+* DONE 2014-03-26 meeting
 ** outline'
 *** 1. today we'll talk about physics
   - change things up a little
@@ -74,35 +74,36 @@ Atkey is rigid symmetries in the sense of classical group theory
 HOTT is continuous symmetries in the sense of topological spaces
   Would need to use Atkeys C∞ types
 
-* intro
+* DONE 2014-02-28
+** intro
   - keep it short
-** title
-* parametricity
-** what is a type?
+*** title
+** parametricity
+*** what is a type?
   - set
   - ?
   - relation
-** powerful idea
+*** powerful idea
   - reynolds paper
   - wadler, summary
-** deeper dive
+*** deeper dive
   - more reynolds, heavier text?
   - this is for Dexter, who wanted to see
     Reynolds
-** examples, review of Basu
+*** examples, review of Basu
   - map, fold, reverse
-** counterexamples
-* physics
-** not isolated!
+*** counterexamples
+** physics
+*** not isolated!
   - relations appear all over
-** points on a plane
+*** points on a plane
   - take 2 points, have locations
   - subtract, get distance
   - positions no longer matter TODO
     - any coordinate system, this distance
       is a conserved quantity
   - atkey has hints here
-** many other conserved quantities
+*** many other conserved quantities
   - energy (particle in potential field)
   - momentum (single particle flying around)
   - energy + angular momentum (n-body problem)
@@ -110,44 +111,44 @@ HOTT is continuous symmetries in the sense of topological spaces
   - damped oscillator
     - energy & linear momentum are function
       of time
-** in fact we can generalize
+*** in fact we can generalize
   - lagrangian, general way to find these
-* correlation
-** conserved properties
+** correlation
+*** conserved properties
   - types, physical properties
   - idea: encode 
   - Reynolds: invariant under change of data representation
   - Noether: invariant under change of coordinates
-** TODO example: 
+*** TODO example: 
   - [X] points (diagram)
   - [ ] points between spring
   - [X] pendulum (diagram)
-** how does it work
+*** how does it work
   - at a high level
-* summarize paper
-** abstract
+** summarize paper
+*** abstract
   - Atkey's observation: can we generalize 
     this notion of invariance in physics?
   - create a type system encoding these
     observed invariance properties
   - by parametricity, polymorphism
-** TODO details
+*** TODO details
   - give equation and its type
-** rest of shit
+*** rest of shit
   - the rest of this shit is all formalism
   - cool ideas, for example TODO
-* deeper meaning
+** deeper meaning
   - what does this mean
-* future work
+** future work
   - where can we go
-** steal atkey's slides
-** add bkc slides
-* bib
+*** steal atkey's slides
+*** add bkc slides
+** bib
   - Reynolds 1983
   - Wadler 1989
   - Atkey 2014
   - Atkey et. al 2013
-* other
+** other
   - Polymorphic functions are related if they
     take related types into related results
   - Prop: If t is a closed term of type T
@@ -158,3 +159,14 @@ HOTT is continuous symmetries in the sense of topological spaces
     X; x |- t : T then X;x |= t : T
     - dude, whatever ^^^ 
 
+
+* TODO 2014-04-04
+  - see [[http://delivery.acm.org/10.1145/970000/964010/p99-johann.pdf?ip=71.244.115.104&id=964010&acc=ACTIVE%20SERVICE&key=4D4702B0C3E38B35%2E4D4702B0C3E38B35%2EC8064C223F9C434F%2E4D4702B0C3E38B35&CFID=416783235&CFTOKEN=96037431&__acm__=1396317856_8e49745dcb914bad6a0b642a3e03b09e][Free Theorems in the Presence of Seq]]
+  - parametricity breaks with new primitives,
+    do new primitives change the symmetries?
+  - fuck this, the problem is \bot
+  - why include \bot in the language? (explicit pointed types seem ok)
+    - if you want total functions, make it explicit like with options
+    - otherwise, use partial functions. Those are cool because "fast and loose" is morally correct, no?
+    - propagating implicit \bot seems terrrrrrrible
+  - Deer Ryan, page 106 this paper's checking != \bot
